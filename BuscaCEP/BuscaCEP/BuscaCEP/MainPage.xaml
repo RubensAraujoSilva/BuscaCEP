@@ -3,22 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BuscaCEP.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
+    <StackLayout BackgroundColor="#93999F" Padding="30">
+
+        <Label Text="App Busca CEP" FontSize="Title" Padding="0,50" TextColor="#FFF" FontAttributes="Bold"/>
+        <Image Source="correios.png" Aspect="AspectFit" />
+        <Label Text="Informe um cep para ver o endereço" Padding="0,0,0,20" FontSize="Title"  TextColor="#FFF"/>
+
+        <Entry Placeholder="Digite um CEP" FontSize="18" PlaceholderColor="#FAD809" BackgroundColor="#FFF" x:Name="CEP"/>
+
+        <Button Text="Pesquisar CEP" Padding="0,20" Margin="0,10" TextColor="#FFF" BackgroundColor="#00416B" x:Name="Botao" />
+
+
+        <Label FontSize="20" Padding="10" BackgroundColor="#FF726C65">
             <Label.FormattedText>
                 <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    <FormattedString.Spans >
+                        <Span Text="Resultado: " FontSize="20" FontAttributes="Bold" TextColor="#000000" />
+                        <Span Text="" x:Name="Resultado" TextColor="#000000" />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        
+        
     </StackLayout>
 
 </ContentPage>
